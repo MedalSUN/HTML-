@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>综合练习——埃克森注册页面</title>
+</head>
+<body>
+    <table border="1">
+        <!--图标和标题-->
+        <tr>
+            <td colspan="2"><img src="logo.png" alt="显示无图片"/>
+            <h1>北京欢迎您</h1>
+            <p>有梦想谁都了不起</p></td>
+        </tr>
+        <!--导航和注册表单-->
+        <tr>
+            <td>
+                <dl>
+                    <dt>导航</dt>
+                    <dd>
+                        <ul>
+                            <li><a href="baidu.com">登录</a></li>
+                            <li><a href="baidu.com">注册新用户</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+            </td>
+            <td>
+                <form action="baidu.com" method="post">
+                    <table border="1">
+                        <caption>用户注册</caption>
+                        <tr>
+                            <th>用户名</th>
+                            <th><input type="text" name="userName" value=""/></th>
+                            <th colspan="2"><a href="baidu.com">检测用户名是否重复</a></th>
+                        </tr>
+                        <tr>
+                            <th>密码</th>
+                            <th><input type="password" value="至少6位" maxlength="20"/>（至少六位）</th>
+                            <th>真实姓名</th>
+                            <th><input type="text" name="trueUserName"/></th>
+                        </tr>
+                        <tr>
+                            <th>姓名</th>
+                            <th>
+                                男<input type="radio" name="name1" value="boy"/>
+                                女<input type="radio" name="name1" value="girl"/>
+                            </th>
+                            <th>爱好</th>
+                            <th>
+                                <input type="checkbox" checked="checked"/><label>读书</label>
+                                <input type="checkbox" checked="checked"/><label>踢球</label>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>证件类型</th>
+                            <th>
+                                <select>
+                                    <option>身份证</option>
+                                    <option>第二证</option>
+                                    <option>第三证</option>
+                                </select>
+                            </th>
+                            <th>证件号码</th>
+                            <th><input type="text" name="number"/></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <input type="submit" value="注册"/>
+                                <input type="reset" value="重置"/>
+                            </th>   
+                        </tr>
+                    </table>
+                </form>
+            </td>
+        </tr>
+        <!--版权声明-->
+        <tr>
+            <td colspan="2">&copy;埃克森所有</td> 
+        </tr>
+    </table>
+
+</body>
+
+
+</html>
