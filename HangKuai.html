@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+
+
+<style type="text/css">
+
+/*border 的属性有三个（注：此三者顺序不能乱）：width（边框宽度默认为medium），style（边框样式，不指定时则无边框），color（颜色）
+*/
+/*上下两个块元素的margin会进行重合，详见书cssP41，注意特殊情况。*/
+	.a{
+		margin:30px;
+		margin-left:10px;
+		height:100px;
+		width:100px;
+		border:solid 5px red;
+	}
+	.b{
+	    margin:50px;
+		height:100px;
+		width:100px;
+		border:solid 10px blue;
+	}	
+	/*在行内元素中设置height和width没有任何显示效果，他的行内框大小还是由里面所包含的内容所决定*/
+	.c{
+		display:block;
+		margin:30px;
+		height:100px;
+		width:100px;
+		border:solid 10px red;
+	}
+	/*block元素具有将行内元素转换为块元素，和换行功能
+	   当display设置为inline-block时不存在外边距叠加的现象，因为外边距叠加的现象发生在垂直方向上。
+	   当且仅当两个display都设置为block时才能出现外边框叠加的效果。
+	*/
+	.d{
+		display:inline-block;
+		margin:30px;
+		height:100px;
+		width:100px;
+		border:solid 10px gray;
+	}
+
+
+</style>
+
+
+</head>
+<body>
+	<div class="a">
+		第一个块元素
+	</div>
+	<div class="b">
+		第2个块元素
+	</div>
+	<span class="c">第一个行元素</span>
+	<span class="d">第二个行元素</span>
+
+</body>
+
+</html>
