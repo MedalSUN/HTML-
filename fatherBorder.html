@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    /*
+		1:法一：子元素中设置为浮动，会使父元素的color和高度等坍塌，在里面设置一个空的元素（这是法一：增加一个无意义的标签）在
+		css中设置clear：both就可以在父元素中撑出一块区域。
+        2：法二：将父标签也和子标签一样浮动起来，
+		
+        
+    */
+        .a{
+            background-color:yellow;
+			border:solid 10px red;
+           
+        }
+        .b{
+			
+            background-color:gray;
+			float:left;
+			
+        }  
+		.c{
+			clear:both;
+		}
+		.d{
+		
+			margin:100px;
+            background-color:yellow;
+			border:solid 10px red;
+			float:left;
+           
+        }
+        .e{
+			
+            background-color:gray;
+			float:left;
+			
+        }  
+		
+    </style>
+</head>
+<body> 
+    <div class="a">
+		<div class="b">
+		中国陆军特种部队，中华人民共和国中央人民政府，
+		中国陆军特种部队，中华人民共和国中央人民政府，
+        中国陆军特种部队，中华人民共和国中央人民政府，
+		中国陆军特种部人民政府，中国陆军特种部队，
+		</div>
+		<div class="c">	
+		</div>
+    </div>
+    
+     <div class="d">
+		<div class="e">
+		中国陆军特种部队，中华人民共和国中央人民政府，
+		中国陆军特种部队，中华人民共和国中央人民政府，
+        中国陆军特种部队，中华人民共和国中央人民政府，
+		中国陆军特种部人民政府，中国陆军特种部队，
+		</div>
+    </div>
+    
+    
+    
+</body>
+    
+</html>
