@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+	/*
+		1:在两个块元素中第一个块元素设置了浮动脱离了文档流，
+		接下来的元素布局的时候都会无视他，但是仍然为这个元素让出位置并且环绕在他周围
+		2:第一个元素浮动第二个不浮动会包围住他，解决办法就是将包围元素的clear属性设置为left，
+		注意，要移动哪个哪个元素的clear属性就要设置。只影响设置clear属性的元素本身。
+		3:当第一个元素为普通文本元素时，下边的脱离了文档流但是他不会飘上去，
+		他的垂直位置不会改变，还是会和上一个元素底部进行对齐
+		4:在行元素中margin只能改变左右的距离不能改变（撑开上下的距离），只有padding可以撑开div的高度,
+		在转换为块元素之后margin可以改上下左右的距离。
+		5:两个快元素，当A为绝对定位时，改变A的height则会将B覆盖住，若将A设置为float型，B设置为clear：left那么
+		改变A的高度将不会对B产生影响。
+		
+	*/
+		.a{
+			float:left;
+			padding:20px;
+			border:solid 5px red;
+			margin:20px;
+		}
+		.b{
+			
+			padding:20px;
+			border:solid 5px green;
+			margin:20px;
+			clear:left;
+		}
+		.d{
+			display:block;
+			line-height:200px;
+			padding:10px;
+			border:solid 10px yellow;
+		}
+		.e{
+			float:left;
+			
+			height:100px;
+			width:150px;
+			border:solid 10px gray;
+		}
+		.f{
+			clear:left;
+			height:100px;
+			width:100px;
+			border:solid 10px gray;
+		}
+	</style>
+</head>
+	
+<body>
+	<div class="a">
+		<ul class="c">
+			<li>第一陆军</li>
+			<li>第二陆军</li>
+			<li>第三海军</li>
+			<li>第四空军</li>
+		</ul>
+	</div>
+	<p class="b">
+		中国陆军特种部队，中华人民共和国中央人民政府，中国陆军特种部队，中华人民共和国中央人民政府，
+		中国陆军特种部队，中华人民共和国中央人民政府，中国陆军特种部队，中华人民共和国中央人民政府，
+		中国陆军特种部队，中华人民共和国中央人民政府，中国陆军特种部队，中华人民共和国中央人民政府，
+		中国陆军特种部队，中华人民共和国中央人民政府，中国陆军特种部队，中华人民共和国中央人民政府，
+		中国陆军特种部队，中华人民共和国中央人民政府，中国陆军特种部队，中华人民共和国中央人民政府，
+		中国陆军特种部队，中华人民共和国中央人民政府，中国陆军特种部队，中华人民共和国中央人民政府，
+		中国陆军特种部队，中华人民共和国中央人民政府，中国陆军特种部队，中华人民共和国中央人民政府，
+	</p>
+	<span class="d">最后一颗子弹，留给我，我爱这个国家和人民。</span>
+	
+	
+	<div class="e">
+		试验绝对定位和浮动中，绝对定位的垂直高度改变，覆盖下一个元素，以及浮动定位的好处。
+	</div>
+	
+	<div class="f">
+		第二个块
+	</div>
+	
+	
+	
+</body>
+	
+</html>
