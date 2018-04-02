@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+	/*
+		区别：当设置了border-box的时候，盒子的大小就已经确定了，增加border-width和padding还有内容都会在这个固定的盒子中进行增加
+		未设置时大小时内部内容的大小，无论是增加padding还是border-width都会将盒子的大小撑开。
+		注意：padding不属于内部的内容的大小，在行内框中可以通过增加padding来增加行内矿的高度他从视觉上被视为内部内容，
+		但是在盒子模型中他会被详细的和内容细分开，在设置行内矿中的内容的背景色的时候padding的颜色和内容相一致的。
+		
+	*/
+	
+	.father-1 {
+		margin-top:50px;
+		margin-left:50px;
+		width:300px;
+		height:300px;
+		border:solid 3px red;
+	}
+	.son-a {
+	    box-sizing:border-box;
+		width:100px;
+		height:100px;
+		padding:20px;
+		border:solid 10px blue;
+	}
+	.son-b {
+		width:100px;
+		height:100px;
+		border:solid 10px green;
+		padding:20px;
+	}
+	
+	
+	
+		
+	
+</style>
+</head>
+<body>
+	<div class="father-1">
+		<div class="son-a">设置了</div>
+		<div class="son-b">未设置</div>
+	</div>
+	
+	
+</body>
+
+</html>
