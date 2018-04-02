@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<style>
+	/*
+		1:相对定位是相对于自己的原来的位置进行定位的，
+			1）当只有一个块元素的时候，只是相对于自己初始位置进行偏移。
+			2）当有两个块元素的时候，若第二个元素是相对定位的元素，那么
+			将会受到第一个块元素的独占一行的影响，将会与顶端空出一个块元素的高度。
+		2：当第一个块元素进行绝对定位的时候，他会脱离文档流，此时对第二个块元素
+		   进行相对定位的时候相当于是无视第一个已经绝对定位的块元素，此时有可能会出现覆盖现象。
+		3:当第一个块元素设置为浮动的时候，第二个块元素的格局布置不会受到影响，同样视为此元素消失，
+		  但是后一个元素仍然会为他留出空间，并且其内部内容会将浮动块包裹起来。可以先使用clear属性进行清除浮动。再用position进行定位。
+	*/
+	/*验证第一种情况*/
+	.father-1 {
+		margin-top:50px;
+		margin-left:50px;
+		width:300px;
+		height:300px;
+		border:solid 3px red;
+	}
+	.son-a {
+		width:100px;
+		height:100px;
+		border:solid 5px blue;
+	}
+	.son-b {
+		width:100px;
+		height:100px;
+		border:solid 5px green;
+		position:relative;
+		left:100px;
+		top:100px;
+	}
+	
+	/*验证第二种情况*/
+	.father-2 {
+		margin-top:50px;
+		margin-left:50px;
+		width:300px;
+		height:300px;
+		border:solid 3px red;
+		position:relative;
+	}
+	.son-c {
+		width:100px;
+		height:100px;
+		border:solid 5px blue;
+		position:absolute;
+		top:10px;
+		left:10px;
+	}
+	.son-d {
+		width:100px;
+		height:100px;
+		border:solid 5px green;
+		position:relative;
+		left:100px;
+		top:100px;
+	}
+	/*验证第三种情况*/
+	.father-3 {
+		margin-top:50px;
+		margin-left:50px;
+		width:300px;
+		height:300px;
+		border:solid 3px red;
+		
+	}
+	.son-e {
+		width:100px;
+		height:100px;
+		border:solid 5px blue;
+		float:left;
+	}
+	.son-f {
+		width:100px;
+		height:100px;
+		border:solid 5px green;
+		clear:left;
+		position:relative;
+		top:50px;
+		left:50px;
+	
+		
+	}
+</style>
+</head>
+<body>
+	<div class="father-1">
+		<div class="son-a">第一个块元素</div>
+		<div class="son-b">第二个块元素</div>
+	</div>
+	<div class="father-2">
+		<div class="son-c">第一个块元素</div>
+		<div class="son-d">第二个块元素</div>
+	</div>
+	<div class="father-3">
+		<div class="son-e">第一个块元素</div>
+		<div class="son-f">第二个</div>
+	</div>
+</body>
+
+</html>
