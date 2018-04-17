@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>text-align&&margin</title>
+    <style type="text/css">
+
+		.box1 {
+			background-color:blue;
+			text-align:center;
+		}
+        .box1 img {
+			display:inline-block;
+			width:100px;
+			height:100px;
+		}
+		
+
+		.box2 {
+			margin-top:10px;
+			background-color:yellow;
+			text-align:center;	
+		}
+		.first {
+			display:block;
+			width:100px;
+			height:100px;
+		}
+		
+		
+		.box3 {
+			margin-top:10px;
+			background-color:red;
+			text-align:center;
+		}
+		
+		
+		
+		.box4 {
+			margin-top:10px;
+			background-color:green;
+			text-align:center;
+		}
+		
+
+		.box5 {
+			margin-top:10px;
+			background-color:blue;
+			height:150px;
+		}
+		.fc {
+			background-color:red;
+			display:inline-block;
+			margin:0 auto;
+		}
+		.sec {
+			width:100px;
+			height:100px;
+		}
+		
+		.box6 {
+			margin-top:10px;
+			background-color:blue;
+			height:150px;
+		}
+		.fc2 {
+			background-color:red;
+		}
+		.sec2 {
+		    display:block;
+			width:100px;
+			height:100px;
+			margin:0 auto;
+		}
+    </style>
+</head>
+<body>
+	<div class="box1">
+		<img src="letter.jpg" alt="显示为图片"/>
+    </div>
+	
+	<div class="box2">
+			<img class="first" src="letter.jpg" alt="显示为图片"/>
+    </div>
+    <div class="box3">
+		<span> box3：此处为内联元素居中显示</span>
+	</div>
+	
+	<div class="box4">
+		<pre>pre标签</pre>
+		<div>div标签</div>
+		<h3>box4：h标签可以居中</h3>
+	</div>
+	
+	<div class="box5">
+		<div class="fc">
+			<img class="sec" src="letter.jpg" alt="显示为图片"/>
+		</div>
+	</div>
+	
+	<div class="box6">
+		<div class="fc2">
+			<img class="sec2" src="letter.jpg" alt="显示为图片"/>
+		</div>
+	</div>
+</body>
+</html>
