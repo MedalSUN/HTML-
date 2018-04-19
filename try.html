@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<style>
+	.input1 {
+		text-align:center;
+	}
+	.search-word {
+		width:300px;
+		height:30px;
+	}
+	.input1 span {
+		display:inline-block;
+		background-image: url(camera.png);
+		width: 20px;
+        height: 20px;
+		position: absolute;
+        margin-left: -30px;
+        margin-top: 10px;
+		background-repeat: no-repeat;
+	}
+	 .input1 span:hover {
+        background-position: 0 -20px;
+    }
+	
+
+
+	.input2 {
+		text-align:center;
+		margin-top:10px;
+	}
+	.input2 img {
+		display:inline-block;
+		background-position:0;
+		width: 20px;
+        height: 20px;
+		position: absolute;
+        margin-left: -30px;
+        margin-top: 10px;
+		background-repeat: no-repeat;
+		
+		
+	}
+	 .input2 img:hover {
+        background-position: 0 -20px;
+    }
+	
+	
+	
+		
+	
+	.search-button {
+		width: 100px;
+		height:36px;
+		border:0;
+		margin-left:-5px;
+		vertical-align: bottom;
+		background-color: #3385ff;
+        color: #fff; 
+	}
+	.search-button:hover {
+        background-color: #317ef3;
+    }
+	
+	
+	
+	/*css代码。当元素不为空，但是没有设置高度和宽度时*/
+	.k {
+	    background-color: yellow;
+		height:100px;
+	}
+	.k span {
+		display:inline-block;
+		background-image: url(position.jpg);
+		background-repeat: no-repeat;
+	}
+	
+	
+	
+	
+	
+</style>
+</head>
+<body>
+	
+	
+	<!--css引入图标-->
+	<div class="input1">
+		<input class="search-word" type="text" name="question">
+		<span></span>
+		<input class="search-button" type="button" value="百度一下">
+	</div>
+	<!--img引入图片-->
+	<div class="input2">
+		<input class="search-word" type="text" name="question">
+		<img src="camera.png" alt="照相机图片"/>
+		<input class="search-button" type="button" value="百度一下">
+	</div>
+	
+	
+	
+	
+	
+	
+
+	<!-- 图片定位显示其中的小图标 -->
+	<div class="k">
+		<span>kakaka</span>
+	</div>
+	
+</body>
+
+</html>
