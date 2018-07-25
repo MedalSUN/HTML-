@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表</title>
+</head>
+<body>
+
+<!--
+1:  li 标签不允许单独使用，必须是在ul ol内部
+2：  有序列表在进行嵌套的时候他的标识符不会改变，但是会产生缩进
+3：  无序列表在嵌套的时候，他的标识符会随着层级的递增发生改变，且会产生缩进。
+4：  有序和无序列表可以随意的进行嵌套。
+
+
+5:dl    -list========注意内部列表内容已经不是li标签了。
+6:dt    -title
+7：dd    -description========会有缩进显示，
+        定义列表一般用于实现==图文混编==的效果。dt中是图片标签，dd是图片的描述信息
+-->
+
+<ol>
+    <li>
+        烟台大学
+    </li>
+    <li>鲁东大学</li>
+    <li>
+        工商学院
+        <ol>
+            <li>信电</li>
+            <li>
+                工程
+                <ul>
+                    <li>信息</li>
+                    <li>造价</li>
+                    <li>管理</li>
+                </ul>
+            </li>
+            <li>法学</li>
+        </ol>
+    </li>
+</ol>
+
+
+<dl>
+    <dt>水</dt>
+    <dd>水是生命之源</dd>
+    <dd>水是生命之源</dd>
+    <dd>水是生命之源</dd>
+</dl>
+
+
+<dl>
+    <dt><img src="../../img/first.jpg" alt="图片正在加载中" weight="30px" height="20px"></dt>
+    <dd>金毛贵</dd>
+    <dd>金毛夏天味还大</dd>
+    <dd>金毛还得天天溜</dd>
+
+</dl>
+
+
+
+</body>
+</html>
