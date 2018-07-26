@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格的直列化</title>
+</head>
+<body>
+
+<!--
+
+==========这是在表格的=======垂直！！！！！方向的
+                将某一列，或者某几列设置特殊样式。
+
+            表格的直列化
+            1：colgroup
+            2:内部包含上col标签，确定包含多少列
+            3：内部的span属性。
+
+
+
+-->
+
+
+
+
+
+<table border="3" align="center" width="500px" height="500px">
+
+
+    <!--前两列放到一个组里面   可以直接在标签colgroup中设置属性-->
+    <colgroup bgcolor="yellow">
+        <col span="2"><!--此时跨列就不用再使用colspan-->
+    </colgroup>
+
+    <!--第三列放到一个组里面 可以直接在col中进行设置属性-->
+    <colgroup>
+        <col bgcolor="red">
+    </colgroup>
+
+    <colgroup>
+        <col bgcolor="blue">
+    </colgroup>
+
+
+    <thead>
+    <tr>
+        <td>编号</td>
+        <td>姓名</td>
+        <td>班级</td>
+        <td>职位</td>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>001</td>
+        <td>zhangsan</td>
+        <td>一般</td>
+        <td>暗账</td>
+    </tr>
+    <tr>
+        <td>001</td>
+        <td>zhangsan</td>
+        <td>一般</td>
+        <td>暗账</td>
+    </tr>
+    <tr>
+        <td>001</td>
+        <td>zhangsan</td>
+        <td>一般</td>
+        <td>暗账</td>
+    </tr>
+    <tr>
+        <td>001</td>
+        <td>zhangsan</td>
+        <td>一般</td>
+        <td>暗账</td>
+    </tr>
+    </tbody>
+
+    <tfoot>
+    <tr>
+        <td>汇总</td>
+        <td>汇总</td>
+        <td>汇总</td>
+        <td>汇总</td>
+
+    </tr>
+
+    </tfoot>
+
+
+
+
+</body>
+</html>

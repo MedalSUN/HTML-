@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 表格结构化和直列化</title>
+</head>
+<body>
+<!--
+            表格结构化（语义化）和直列化
+
+
+                ====***这是表格==横向（水平方向上将多个行化为一组）=结构化===横向的
+
+            一：结构化：===对表格进行分区，1）你可以随意排放位置但是显示的顺序仍然是标题-头-体-尾！！！！！
+                                       2）可以对某一块进行设置特殊的显示样式
+            1：thead  ：表格头
+            2：tbody   ：表格体
+            3：tfoot  ：表格尾
+            4：caption：表格标题
+            ====注意使用了表格的结构化之后，不论在html中是怎么排列的，显示顺序都是标题-头-体-尾
+
+
+-->
+<table>
+    <caption>学生档案</caption>
+    <thead>
+        <tr>
+            <td>编号</td>
+            <td>姓名</td>
+            <td>班级</td>
+            <td>职位</td>
+        </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>001</td>
+        <td>zhangsan</td>
+        <td>一般</td>
+        <td>暗账</td>
+    </tr>
+    <tr>
+        <td>001</td>
+        <td>zhangsan</td>
+        <td>一般</td>
+        <td>暗账</td>
+    </tr>
+    <tr>
+        <td>001</td>
+        <td>zhangsan</td>
+        <td>一般</td>
+        <td>暗账</td>
+    </tr>
+    <tr>
+        <td>001</td>
+        <td>zhangsan</td>
+        <td>一般</td>
+        <td>暗账</td>
+    </tr>
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td>汇总</td>
+            <td>汇总</td>
+            <td>汇总</td>
+            <td>汇总</td>
+
+        </tr>
+
+    </tfoot>
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+
+
+    <style type="text/css">
+
+        #first {
+            background-image: url(../../img/first.jpg);
+            width:200px;
+            height: 200px;
+        }
+
+        #second {
+            background-image: url(../../img/practice2-2.jpg);
+            width:200px;
+            height: 200px;
+        }
+
+        #three {
+            background-image: url(../../img/practice2.jpg);
+            width:200px;
+            height: 200px;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+
+
+
+<!--颜色快捷键，在属性bgcolor=“”在括号里面输入choose color 自动出现调色板。-->
+
+<!--
+        table的属性
+    1：th用于代替td，实现表头标题，重点加粗。居中显示
+    2:每一列的宽度是由这一列中最宽的那一行进行比例扩展，而不是第一行。
+    3:垂直方向居中，水平方向是居左显示。
+    4:border:
+        1)border:表格边框
+        2）width，height；表格宽高
+        3）align：表格对齐方式；默认左对齐
+      **4）bgcolor：表格背景颜色
+      **5）background：背景图片
+            在4）5）同时存在的时候优先级高于背景颜色====在行和列中没有设置背景图片的属性！！！！
+        6）bordercolor：表格的边框颜色
+        7)cellspacing：单元格之间的间距。当设置为0 的时候他的单元格的线会变成一条线
+        style="border-collapse: collapse"设置单元格的边框为重叠。
+        8)cellpadding：单元格中的文本和单元格边框之间的距离
+
+
+-->
+
+<!--
+        表格中单元格td的属性==但一般width和height都加在td上，因为tr是由td撑起来。
+        1：width：单元格宽度
+        2：height：单元格高度
+        3：valign：文本的垂直对齐方式========top middle bottom。默认是middle。
+        4：align：文本的水平对齐方式
+        5：bgcolor：单元格的背景颜色====当设置table的bgcolor和单元格的bgcolor的时候，单元格的优先
+
+
+相同属性优先级设置：
+        单元格td>行tr>表格table
+
+-->
+
+<!--
+        表格中行tr的属性
+        1：width：设置是没有意义的===一般width和height都加在td上，因为tr是由td撑起来。
+        整体tr的宽度是由表格整体决定的
+        2：height：整行的高度
+        3：bgcolor：行的背景颜色
+        4：align：文本的水平对齐方式
+        5：valign：文本的垂直对齐方式
+-->
+
+
+
+<table border="10px" width="500px" height="400px" align="center"
+       bgcolor="fuchsia" background="../../img/first.jpg" bordercolor="yellow"
+       cellspacing="10px" cellpadding="10px">
+    <tr>
+         <th width="100px" height="60px"
+             align="left" valign="top" bgcolor="red">学号</th>
+         <th>姓名</th>
+         <th>数学</th>
+         <th>英语成绩</th>
+         <th>语文</th>
+    </tr>
+    <tr align="center" valign="top">
+        <td>0010</td>
+        <td>张三000000000000000</td>
+        <td>10</td>
+        <td>10</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>0011</td>
+        <td>李四</td>
+        <td>20</td>
+        <td>20</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>0012</td>
+        <td>赵四</td>
+        <td>20</td>
+        <td>20</td>
+        <td>0</td>
+    </tr>
+</table>
+<br>
+<hr>
+
+<table border="5" bordercolor="red" align="center" cellpadding="5px" cellspacing="4px">
+    <tr>
+        <th>班级</th>
+        <th>科目</th>
+        <th>讲师</th>
+        <th>班主任</th>
+    </tr>
+    <tr>
+        <td>Android1602</td>
+        <td>Android</td>
+        <td>孙老师</td>
+        <td>蒋老师</td>
+    </tr>
+    <tr>
+        <td>Java—基础</td>
+        <td>Java</td>
+        <td>刘老师</td>
+        <td>蒋老师</td>
+    </tr>
+
+</table>
+
+<br>
+<hr>
+
+<table width="500px" height="300px" border="3" align="center" bgcolor="yellow">
+    <tr valign="top" valign="left">
+        <td>第一行</td>
+    </tr>
+    <tr align="center" valign="center">
+        <td>第二行</td>
+    </tr>
+    <tr align="right" valign="bottom">
+        <td>第三行</td>
+    </tr>
+</table>
+<br>
+<hr>
+
+
+<table align="center" width="500px" bgcolor="">
+    <tr bgcolor="yellow" height="100px">
+        <td>第一行第一列</td>
+        <td>第一行第二列</td>
+        <td>第一行第三列</td>
+    </tr>
+    <tr bgcolor="fuchsia" height="300px">
+        <td>第2行第1列</td>
+        <td>第2行第2列</td>
+        <td>第2行第3列</td>
+    </tr>
+</table>
+
+<br>
+<hr>
+
+
+<table border="1" bgcolor="#00ADC3" align="center" width="600px" height="400px"
+       cellspacing="0" bordercolor="#00ADC3">
+    <tr style="color: white">
+        <td>入库时间</td>
+        <td>入库器材</td>
+        <td>数量</td>
+        <td>经办人</td>
+        <td>管理员</td>
+    </tr>
+    <tr bgcolor="#A9DFE7">
+        <td>2018-01-01</td>
+        <td>单杠</td>
+        <td>3</td>
+        <td>张三</td>
+        <td>李四</td>
+    </tr>
+    <tr bgcolor="#FFFFFF">
+        <td>2018-02-01</td>
+        <td>双杠</td>
+        <td>3</td>
+        <td>张三</td>
+        <td>李四</td>
+    </tr>
+    <tr bgcolor="#A9DFE7">
+        <td>2018-01-02</td>
+        <td>双杠</td>
+        <td>3</td>
+        <td>张三</td>
+        <td>李四</td>
+    </tr>
+</table>
+
+
+<br>
+<hr>
+
+
+<table border="1" width="600px" height="600px" align="center">
+    <caption>表格标题</caption>
+    <tr>
+        <td bgcolor="fuchsia">rrrr</td>
+        <td bgcolor="yellow">ddd</td>
+        <td bgcolor="white">swqc</td>
+    </tr>
+    <tr>
+        <td bgcolor="red">feec</td>
+        <td bgcolor="#006400">zzq</td>
+        <td bgcolor="#ffd700">gthyht</td>
+    </tr>
+    <tr>
+        <td id="first"></td>
+        <td id="second"></td>
+        <td id="three"></td>
+    </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

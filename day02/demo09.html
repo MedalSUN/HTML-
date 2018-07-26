@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格的跨行跨列</title>
+
+    <style type="text/css">
+
+        #im {
+
+            background-image: url("../../img/first.jpg");
+            height: 600px;
+            width: 100px;
+
+        }
+        #sec {
+
+            background-image: url("../../img/first.jpg");
+            height: 400px;
+            width: 250px;
+
+        }
+
+    </style>
+
+
+</head>
+<body>
+
+
+
+
+
+<table border="2" width="50px" height="60px">
+    <tr>
+        <td>cs</td>
+        <td>sc</td>
+        <td colspan="2">wxsx</td>
+    </tr>
+    <tr>
+        <td rowspan="2">1</td>
+        <td>2</td>
+        <td>2</td>
+        <td>2</td>
+    </tr>
+    <tr>
+
+        <td>ws</td>
+        <td>xs</td>
+        <td>fv</td>
+    </tr>
+</table>
+
+<br>
+<hr>
+
+
+<table border="1" width="300px" height="200px">
+    <tr>
+        <td colspan="5">电子产品类</td>
+    </tr>
+    <tr>
+        <td>手即</td>
+        <td>苹果</td>
+        <td>里</td>
+        <td>酸枣</td>
+        <td>酸梅</td>
+    </tr>
+    <tr>
+        <td colspan="2">家电类</td>
+
+        <td colspan="3">家具类</td>
+
+
+    </tr>
+    <tr>
+        <td>冰箱</td>
+        <td>洗衣机</td>
+        <td>电饭锅</td>
+        <td>沙发</td>
+        <td>藏</td>
+    </tr>
+</table>
+
+<br>
+<hr>
+
+
+<table border="1" align="center">
+    <tr>
+        <td colspan="3">杰睿教育</td>
+
+    </tr>
+    <tr>
+        <td>H5</td>
+        <td rowspan="2">安卓</td>
+        <td>JAVA</td>
+    </tr>
+    <tr>
+        <td>css</td>
+        <td>js</td>
+
+    </tr>
+</table>
+
+<br>
+<hr>
+
+<table border="2" align="center" cellspacing="0" width="500px" height="600px"
+       bordercolor="red">
+    <tr>
+        <td id="im"   rowspan="6"></td>
+        <td rowspan="3"></td>
+        <td rowspan="2"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+    <tr>
+        <td rowspan="2"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td rowspan="3"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td rowspan="2"></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+</table>
+
+
+<table border="5" align="center" cellspacing="5" width="500px" height="500px">
+    <tr align="center">
+        <td colspan="2"  ><strong>出塞：王昌龄</strong></td>
+    </tr>
+    <tr align="center">
+        <td id="sec" rowspan="4"></td>
+        <td>秦时明月汉时关</td>
+    </tr>
+    <tr align="center">
+        <td>万里长征人未还</td>
+    </tr>
+    <tr align="center">
+        <td>但使龙城飞将在</td>
+    </tr>
+    <tr align="center">
+        <td>不教胡马度阴山</td>
+    </tr>
+</table>
+
+
+
+
+
+</body>
+</html>
