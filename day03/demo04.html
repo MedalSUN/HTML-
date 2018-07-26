@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tabindex</title>
+</head>
+<body>
+
+
+<!--
+    输完一个框之后，使用tab键可以跳转到下一个边框，可以人为设置tab的下一个键框
+    使用tabindex属性可以设置tab键的指定跳转顺序。
+
+-->
+
+
+<form action="kk.java" method="get">
+        姓名：<input type="text" name="uname" tabindex="1">
+        <br>
+        密码：<input type="password" name="pwd">
+        <br>
+        性别：<input type="radio" name="sex" value="man" tabindex="3">男
+        <input type="radio" name="sex" value="wm">女
+        <br>
+        爱好：<input type="checkbox" name="hobby" value="bb" tabindex="2">篮球
+        <input type="checkbox" name="hobby" value="fb">足球
+        <input type="checkbox" name="hobby" value="wq">网球
+        <br>
+        籍贯：
+        <select name="home">
+            <option value="sd">山东</option>
+            <option value="sx">山西</option>
+            <option value="hn">河南</option>
+            <option value="bj">北极</option>
+            <option value="nj">南极</option>
+        </select>
+        <br>
+        <input type="reset" value="清空">
+        <input type="submit" value="登录">
+</form>
+
+</body>
+</html>

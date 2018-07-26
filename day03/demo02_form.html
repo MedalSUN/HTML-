@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单form</title>
+</head>
+<body>
+
+<!--老师总结
+         action：指定表单数据提交的地址
+method：表单数据提交的方法
+
+为了往服务端提交数据时，提交的数据清晰易懂方便处理：
+1：普通的输入框，需要添加name属性，来保证键值对的完整。
+2：非输入框，需要添加name和value属性，来保证键值对的完整。
+           另外，name还有分组的作用，
+           单选框，相同name的是一组，单选框中同一组内的选项有互斥的效果。
+           复选框，也需要name属性来表明当前的多项是一组。
+
+通过get请求往服务端提交数据的时候，提交的数据会追加在url地址的后面。
+以？进行分隔。多个数据之间用&分隔。
+get缺点：暴露敏感信息，传输数据有限
+get的优点：传输速度快
+
+post请求：传输的数据放在请求体中，而不是暴露在url地址的后面
+post：可以隐藏敏感信息，传输的数据多少没有限制
+post：传输速度慢 （相对的）
+               
+-->
+
+
+<!--个人总结
+
+
+            输入类
+                   +两者都要有name属性====要注意name在 每一个里面的作用。
+            非输入类
+                   里面没有输入值的都要设置value，来用于提交到后台
+
+
+
+
+        表单(form是一个块级元素，但是input是行级元素)===用于前后端交互。
+        1：表单一般和表格连用，table嵌套进form中
+        2：action：表单提交地址
+        3：method：表单数据提交的方法
+            1）get：默认方法。将传输的数据追加在URL地址后边，以问号进行连接，多个数据之间以&进行分隔
+            /kk.java?uname=sss&pwd=.pu%2Cl%2Cui&sex=man
+            缺陷：1）会暴露敏感信息。
+                 2）传输信息数据有限
+            优点：1）传输速度快     =======所以如果传输的数据不是敏感信息，不太长，就可以使用get方法
+
+
+            2）post：/kk.java
+            传输的数据放在网络请求体中，而不是暴露在URL地址后边
+            优点：1）保密性
+                   2）传输的数据相对get的大，
+            缺点：
+            1）传输速度相对get较慢
+
+
+===========所有的输入框和非输入框都需要设置name属性和value属性，用来保证键值对的完整性。=============
+
+
+
+           一：普通输入文本框
+             1：value属性，设置默认值。
+             2：name属性是必须要有的。为了向后台传输数据后台可以进行辨别
+
+        二：单选框：
+           1：为了避免多个单选框冲突，要使用name属性进行归类。
+           设置了name属性之后在同一个组内（name相同）的单选框他是互斥的（只能选择一个）
+           2：input中添加checked属性，默认选中，只能选中一个
+       ****3：必须添加value属性，后台才能拿到选择的值。
+
+
+         三：多选框
+            1：设置name不是为了使他们具有互斥操作，而是为了将他们分组方便数据传输。
+            2：input中添加checked属性，默认选中，可以选择多个
+        ****3：必须添加value属性，后台才能拿到选择的值。
+
+         四：四个按钮
+         1：type=reset按钮value默认值为“重置”
+         2：type=“submit” 提交
+         3：type=“image” 是一个图片形式的提交按钮
+         4：button标签，h5中的标签 具有提交的功能。
+
+
+        五：下拉框：
+        1:select 是容器，option是选择项
+        2：因为select只能选中一个，所以name只放在select中即可
+        3：在option中每一个选择项都要使用value属性，value是要向服务器传输的值。
+
+
+        六：文本输入域
+        1：注意输入域开始的标题是放在输入域的左下角的。
+
+
+        七：
+        1：使用fieldset进行表单区域划分，但是仍然是一个form表单中的。
+        2：使用legend包裹标题，标题是嵌入到表单外边的框上的。===形成分区显示
+        3：fieldset是放在form表单中的。
+
+-->
+
+
+<form action="kk.java" method="get">
+
+    <fieldset><!--给表单添加上边框===有特殊效果-->
+        <legend>
+            基本个人信息
+        </legend>
+        姓名：<input type="text" name="uname">
+        <br>
+        密码：<input type="password" name="pwd">
+        <br>
+        性别：<input type="radio" name="sex" value="man">男
+        <input type="radio" name="sex" value="wm">女
+        <br>
+        爱好：<input type="checkbox" name="hobby" value="bb">篮球
+        <input type="checkbox" name="hobby" value="fb">足球
+        <input type="checkbox" name="hobby" value="wq">网球
+        <br>
+        <!--<input type="image" src="../../img/first.jpg">图片形式的提交按钮-->
+        籍贯：
+        <select name="home">
+            <option value="sd">山东</option>
+            <option value="sx">山西</option>
+            <option value="hn">河南</option>
+            <option value="bj">北极</option>
+            <option value="nj">南极</option>
+        </select>
+        <br>
+        <input type="reset" value="清空">
+        <input type="submit" value="登录">
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            其他信息
+        </legend>
+        <span style="position: relative;top:-145px">问题：</span>
+        <textarea name="question" cols="30" rows="10"></textarea>
+        <br>
+        上传文件：<input type="file"><!--上传文件-->
+        <br>
+        <button>提交</button>
+    </fieldset>
+
+</form>
+
+
+</body>
+</html>

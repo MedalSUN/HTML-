@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单练习</title>
+</head>
+<body>
+
+
+<form action="kk.java" method="get">
+
+    <fieldset>
+        <legend>
+            个人基本信息
+        </legend>
+        用户名：
+        <input type="text" name="name">
+        <br>
+        密码：
+        <input type="password" name="pwd">
+        <br>
+        性别：
+        <input type="radio" name="sex" value="man" checked>男
+        <input type="radio" name="sex" value="wm">女
+        <br>
+        爱好：
+        <input type="checkbox" name="hobby" value="ft" checked>足球
+        <input type="checkbox" name="hobby" value="bb">篮球
+        <input type="checkbox" name="hobby" value="yb">羽毛球
+        <input type="checkbox" name="hobby" value="ppb">乒乓球
+        <br>
+        出生日期：
+        <input type="text" name="year">
+        年
+        <select name="month" value="选择月份">
+            <option>选择月份</option>
+            <option value="one">1</option>
+            <option value="two">2</option>
+            <option value="three">3</option>
+            <option value="f">4</option>
+            <option value="d">5</option>
+        </select>
+        月
+        <input type="text" name="day">
+        日
+        <br>
+        <input type="file" name="file">
+        <br>
+
+        <span style="position: relative;top:-140px">阅读协议：</span>
+        <textarea name="book" cols="30" rows="10">欢迎阅读协议。。。。</textarea>
+        <br>
+        同意上协议：
+        <input type="checkbox" name="flag" value="yes">
+        <br>
+        <input type="reset" value="重置">
+        <input type="submit" value="注册">
+
+
+    </fieldset>
+
+
+
+</form>
+
+
+
+
+
+
+</body>
+</html>

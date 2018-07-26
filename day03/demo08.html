@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>H5表单新属性</title>
+</head>
+
+<style type="text/css">
+
+
+    select {
+        height:20px;
+    }
+
+</style>
+
+
+
+<body>
+
+
+
+<form action="">
+
+    <!--
+
+    1:输入框中输的时候会出现之前的信息（输入框内容自动补全），设置autocomplete="off"关闭
+    2:autofocus="true"  自动获取焦点；
+    3：form属性，表单外的表单项，使用form和id相关联
+    4：required 设置必填项 （减少后台工作量，防止错误）；
+    默认情况下是可以不填，直接写入required，不用写成required=“”形式。
+    5：pattern：和正则表达式有关，验证input模式****
+    6：placeholder="请输入姓名"   苹果机中的表单都不会出现类似
+
+    =====请输入姓名：+文本框
+    这种形式
+    他都会使用placeholder="请输入姓名"，直接会在文本框中出现浅灰色的字体。（提示信息）
+
+    注意value（默认值） 和placeholder（提示信息）的区别。
+
+
+    7：readonly属性，只读！！！，虽然还是一个输入框，但是他只能去读，不能再进行输入。
+            常用于系统自动分配用户名。
+    8:
+       单选框，多选框的默认选择使用checked默认的
+       下拉列表框使用selected选择默认的
+
+    9：
+    下拉列表使用多选操作，可以使用multiple属性。在select 标签中使用。
+    下拉列表框收不回去。全部展开了，此时可以设置下拉列表的height,来限制展示区域
+    select {
+        height:20px;
+    }
+
+
+
+    -->
+    <input type="text" autocomplete="off" autofocus="true" required placeholder="请输入姓名">
+
+    <input type="text" autocomplete="off" autofocus="true" readonly>
+
+
+    <select name="month" multiple>
+        <option>选择月份</option>
+        <option value="one">1</option>
+        <option value="two" selected>2</option>
+        <option value="three">3</option>
+        <option value="f">4</option>
+        <option value="d">5</option>
+    </select>
+
+
+</form>
+
+
+
+</body>
+</html>

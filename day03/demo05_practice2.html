@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo03练习的优化</title>
+</head>
+
+<style type="text/css">
+
+
+
+</style>
+
+
+
+
+<body>
+
+<form action="kk.java" method="get">
+
+
+    <fieldset>
+        <legend>
+            个人信息
+        </legend>
+        <table height="600px" align="center" bgcolor="#f0f8ff"
+               border="3" >
+
+            <colgroup>
+                <col>
+            </colgroup>
+
+
+
+
+<thead>
+            <tr>
+                <td>
+                    用户名：
+                </td>
+                <td>
+                    <input type="text" name="name">(0-9&a-z)
+                </td>
+                <td>
+                    <h3>阅读协议：</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    密&nbsp码：
+                </td>
+                <td>
+                    <input type="password" name="pwd">(0-9)
+                </td>
+                <td rowspan="3">
+                <textarea name="book" cols="30" rows="10">
+                    欢迎阅读协议。。。。
+                </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    性别：
+                </td>
+                <td>
+                    <input type="radio" name="sex" value="man" checked>男
+                    <input type="radio" name="sex" value="wm">女
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    爱好：
+                </td>
+                <td>
+                    <input type="checkbox" name="hobby" value="ft" checked>足球
+                    <input type="checkbox" name="hobby" value="bb">篮球
+                    <input type="checkbox" name="hobby" value="yb">羽毛球
+                    <input type="checkbox" name="hobby" value="ppb">乒乓球
+                </td>
+            </tr>
+</thead>
+
+            <tbody>
+            <tr>
+                <td colspan="2">
+                    出生日期：
+                    <input type="text" name="year">
+                    年
+                    <select name="month" value="选择月份">
+                        <option>选择月份</option>
+                        <option value="one">1</option>
+                        <option value="two">2</option>
+                        <option value="three">3</option>
+                        <option value="f">4</option>
+                        <option value="d">5</option>
+                    </select>
+                    月
+                    <input type="text" name="day">
+                    日
+                </td>
+                <td>xxxx</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="file" name="file">
+                </td>
+                <td>
+                    同意上协议：
+                    <input type="checkbox" name="flag" value="yes">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <input type="reset" value="重置">
+                    <input type="submit" value="注册">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </fieldset>
+</form>
+
+
+</body>
+</html>
