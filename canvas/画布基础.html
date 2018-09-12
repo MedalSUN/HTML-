@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <!--
+      IE浏览器中只有9之后的支持
+    -->
+
+    <style>
+
+        canvas {
+            border: 1px solid red;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+<!--
+画布：
+1：画布的宽高默认是300*150
+2：画布的宽高不能使用样式style来设置
+3：必须通过行内属性，或者js（调的也是属性而不是样式）来调节，不能使用css（行内样式等）来设置；
+4：就算是看起来改变了画板的宽高，但是里面的内容会被改变！！！！变形；
+
+-->
+
+<canvas id="canvas1" width="400px" height="300px"></canvas>
+<canvas id="canvas2" width="400px" height="300px"></canvas>
+<canvas id="canvas3" width="400px" height="300px"></canvas>
+<canvas id="canvas4" width="400px" height="300px"></canvas>
+<canvas id="canvas5" width="400px" height="300px"></canvas>
+
+
+</body>
+
+<script>
+
+    /*
+    * 1：获取画布标签；
+    * 2: 创建context对象
+    * 3：使用context对象调用画布中的属性和方法；
+    * 4:注意：在画布中，要实现描边和填充效果，需要提前写好描边和填充的风格
+    *    （strokeStyle，fillStyle 要写在stroke（）和fill（）前边）
+    * */
+
+
+    var canvas1 = document.getElementById("canvas1");
+    var content1 = canvas1.getContext("2d");
+
+    //画线====三角形
+    content1.beginPath();//开始一条路径
+    content1.moveTo(200, 0);
+    content1.lineTo(400, 150);//上述两个方法只是描绘出来路径
+    content1.lineTo(0, 150);
+    content1.lineTo(200, 0);//这个方法代表可以将线条的头在指向一个位置； content.closePath();此方法可以闭合路径，从尾指到头,(终点还在线头的最后边)
+    content1.strokeStyle = "yellow";//设置描边的颜色style，默认颜色是黑色
+    content1.fillStyle = "green";//设置填充的颜色style，默认颜色是黑色
+    content1.stroke();//对描绘出来的路径（线）进行描边
+    content1.fill();//对描绘出来的路径（线）进行填充
+
+
+    var canvas2 = document.getElementById("canvas2");
+    var content2 = canvas2.getContext("2d");
+    //画矩形
+    //方法1：
+    content2.rect(20, 20, 100, 200);//x,y,宽，高；
+    content2.strokeStyle = "red";
+    content2.fillStyle = "gray";
+    content2.stroke();
+    content2.fill();
+
+    //方法2：
+    content2.fillStyle = "yellow";
+    content2.fillRect(130, 100, 100, 100);
+
+
+    //画圆形    canvas中没有圆形的方法，但是存在画弧的方法；arc只是用来画扇形，曲线，只有闭合之后才是圆形
+    var canvas3 = document.getElementById("canvas3");
+    var content3 = canvas3.getContext("2d");
+    content3.arc(200, 150, 100, 0, Math.PI * 2);//  圆心x， 圆心y ，半径 ， 起始角（起点从右边开始） ，结束角；
+    content3.fillStyle = "red";
+    content3.fill();
+
+
+
+    //画个扇形
+    var canvas4= document.getElementById("canvas4");
+    var content4 = canvas4.getContext("2d");
+    content4.arc(200, 150, 100, 0, Math.PI * 0.5);
+    content4.fillStyle = "black";
+    content4.fill();//他会自动给你闭合，将首尾相连，变成一个月牙；
+    content4.strokeStyle = "red";
+    content4.stroke();
+
+    //改进上述画扇形
+    /*
+    * 注意：
+    * 1：要想出现一个扇形，必须原点到弧的起始点有连线，所以必须使用 beginPath和moveTo（）
+    * 2：在每一个使用beginPath之后都必须使用closePath（）
+    * 3：再接着画一个时就需要重新beginPath，开启路径；
+    *
+    * */
+    var canvas5= document.getElementById("canvas5");
+    var content5 = canvas5.getContext("2d");
+
+    content5.beginPath();
+    content5.moveTo(200,150);
+    content5.arc(200, 150, 100, 0, Math.PI * 0.3);
+    content5.closePath();
+    content5.fillStyle = "yellow";
+    content5.fill();
+
+
+    content5.beginPath();
+    content5.moveTo(200,150);
+    content5.arc(200, 150, 100,Math.PI * 0.3,Math.PI * 0.7);//注意这个start变成上一个的end位置！！！！
+    content5.closePath();
+    content5.fillStyle = "red";
+    content5.fill();
+
+
+    content5.beginPath();
+    content5.moveTo(200,150);
+    content5.arc(200, 150, 100,Math.PI * 0.7,Math.PI * 1.2);//注意这个start变成上一个的end位置！！！！
+    content5.closePath();
+    content5.fillStyle = "blue";
+    content5.fill();
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</html>
