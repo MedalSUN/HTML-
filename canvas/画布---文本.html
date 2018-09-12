@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本画布</title>
+
+
+    <style>
+
+        canvas {
+            border: 1px solid red;
+        }
+
+
+    </style>
+
+
+
+</head>
+<body>
+<canvas id="canvas1" width="400px" height="300px"></canvas>
+<canvas id="canvas2" width="400px" height="300px"></canvas>
+<canvas id="canvas3" width="400px" height="300px"></canvas>
+</body>
+
+<script>
+
+    //单独实验描边和填充
+    var canvas1 = document.getElementById("canvas1");
+    var content1 = canvas1.getContext("2d");
+    content1.font = "50px 宋体";
+    content1.fillStyle = "red";
+    content1.fillText("中华人民",50,100);//只是fill填充整体的颜色
+
+    content1.strokeStyle = "yellow";
+    content1.strokeText("中华人民",50,150);//只是描边，内部不填充
+
+
+
+
+    //实验描边和填充叠加效果
+    var canvas2 = document.getElementById("canvas2");
+    var content2 = canvas2.getContext("2d");
+    content2.font = "50px 宋体";
+    content2.fillStyle = "red";
+    content2.strokeStyle = "yellow";
+    content2.fillText("中华人民",50,100);
+    content2.strokeText("中华人民",50,100);//上述两个进行叠加  出现描边的字体
+
+
+
+
+    /*
+    * 1：设置渐变效果
+    * */
+
+    var canvas3 = document.getElementById("canvas3");
+    var content3 = canvas3.getContext("2d");
+    content3.rect(0,0,200,150);
+    //开始点x，开始点y ,结束点x，结束点y
+    var gr = content3.createLinearGradient(0,0,400,0); //设置渐变的范围;现在是横着进行渐变
+    gr.addColorStop(0,"blue");
+    gr.addColorStop(0.2,"red");
+    gr.addColorStop(0.4,"green");
+    gr.addColorStop(0.6,"yellow");
+    gr.addColorStop(0.8,"black");
+    gr.addColorStop(1,"gray");
+    content3.fillStyle = gr;//把这个渐变效果颜色添加给fillStyle
+    content3.fill();
+
+
+    /*
+    *
+    * 其他canvas效果：http://www.w3school.com.cn/tags/html_ref_canvas.asp
+    *
+    *
+    * */
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
